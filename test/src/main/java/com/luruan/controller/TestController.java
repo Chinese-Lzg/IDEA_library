@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 4
  */
 @RestController
+@ResponseBody
 public class TestController {
     //@Autowired注入不严谨 改成了构造器注入
     final
@@ -21,7 +22,6 @@ public class TestController {
     }
 
     @RequestMapping("/findAll")
-    @ResponseBody
     public void test() {
 
         userMapper.selectAll();
